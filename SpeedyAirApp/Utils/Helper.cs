@@ -10,8 +10,7 @@ namespace SpeedyAirApp
         /// <returns></returns>
         public static List<Order> GetOrders()
         {
-            string relativePath = "Data\\coding-assigment-orders.json";
-            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, relativePath);
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Constants.OrdersDataFilePath);
             string fileContent = File.ReadAllText(filePath);
             //De-serializing JSON orders data to C# Order
             var ordersData = JsonSerializer.Deserialize<Dictionary<string, OrderData>>(fileContent);

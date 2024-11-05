@@ -1,3 +1,4 @@
+using SpeedyAirApp;
 using System.ComponentModel.DataAnnotations;
 
 public class Flight
@@ -28,7 +29,7 @@ public class Flight
     [Required]
     public int Day { get; set; }
 
-    public int Capacity { get; protected set; } = 20;
+    public int Capacity { get; protected set; } = Constants.FlightCapacity;
 
     public bool HasCapacity()
     {
